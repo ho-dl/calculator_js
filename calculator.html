@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html> 
+    
+
+<head> 
+
+    
+	<title>HTML Calculator</title> 
+
+	<!-- For styling -->
+	<style> 
+		table { 
+            padding:10px;
+			border: 2px solid rgb(255, 255, 255);
+            border-radius:10px;
+            background-color:rgb(221, 221, 221);
+			margin-left: auto; 
+			margin-right: auto; 
+		} 
+		
+		input[type="button"] { 
+			width: 100%; 
+			padding: 20px 40px; 
+			background-color: rgb(255, 255, 255); 
+			color: rgb(5, 6, 31); 
+			font-size: 24px; 
+			font-weight: bold;
+             
+			border: none; 
+			border-radius: 100px; 
+		} 
+		
+		input[type="text"] { 
+            background-color:rgb(223, 255, 243);
+			padding: 20px 30px; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: none; 
+			border-radius: 5px; 
+			border: 2px solid rgb(187, 187, 186); 
+		} 
+	</style> 
+</head> 
+
+<body style="margin-top:120px;background-color:#6600ff;"> 
+
+    <script>
+
+
+
+        function display(value){
+            document.getElementById('result').value += value;
+        }
+        
+        
+    </script>
+
+	<!-- Create table -->
+	<table id="calcu" name = "form1"> 
+		<tr> 
+			<td colspan="3"> 
+				<input type="text"   id="result"> 
+			</td> 
+			<td><input type="button" style="background-color:orangered;color:white;" value = "C" onclick = "result.value = ' ' " id= "clear"></td> 
+		</tr> 
+
+		<tr> 
+			<td><input type = "button" value = "1" onclick = "result.value += '1' "></td> 
+			<td>  <input type = "button" value = "2" onclick = "result.value += '2' "></td> 
+			<td><input type = "button" value = "3" onclick = "result.value += '3' "></td> 
+			<td><input type="button" value ="+" onclick = "result.value += '+' " style="background-color: beige;" value="/"></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value = "4" onclick = "result.value += '4' "></td> 
+			<td><input type="button" value = "5" onclick = "result.value += '5' "></td> 
+			<td><input type="button" value = "6" onclick = "result.value += '6' "></td> 
+			<td><input type="button" style="background-color: beige;"  value = "*" onclick = "result.value += '*' "></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value = "7" onclick = "result.value += '7' "></td> 
+			<td><input type="button" value = "8" onclick = "result.value += '8' "></td> 
+			<td><input type="button" value = "9" onclick = "result.value += '9' "></td> 
+			<td><input type="button" value = "-" onclick = "result.value += '-' " style="background-color: beige;" value="-"></td> 
+		</tr> 
+		<tr > 
+			<td><input type="button" value = "0" onclick = "result.value += '0' "></td> 
+			<td><input type="button" value = "." onclick = "result.value += '.' "></td> 
+			<td><input type="button" value = "=" onclick = "result.value = eval(result.value) "></td> 
+			<td><input type="button" value = "/" onclick = "result.value += '/' " style="background-color: beige;" value="+"></td> 
+		</tr> 
+	</table> 
+
+	
+</body> 
+
+</html> 
